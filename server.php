@@ -39,7 +39,8 @@ function validate($username, $password,$user_token,$user_sessionCookie)
         if($user_token==$_SESSION['CSRF_TOKEN'] && $user_sessionCookie==session_id())
         {
             echo "<script> alert('Logged in Successfully') </script>";
-            echo "Welcome : ".$username."<br/>"; 
+            echo "<h1 style=\"font-size:50px;text-align:center;\">Welcome : ".$username."<br/></h1>";
+            //echo "Welcome : ".$username."<br/>"; 
             
         }
         else

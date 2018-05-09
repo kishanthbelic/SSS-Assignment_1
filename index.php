@@ -20,10 +20,12 @@
 
 
 <body>
-		<h1 style="font-size: 42px;text-align:center;color: #fff; ">CSRF Assignment 1</h1>
+		
 	
 <div class="login">
-	
+<h1 style="font-size: 42px;text-align:center;color: #dff9fb;text;">SSS Assignment 1</h1>
+        <p style="text-align:center;color: #95afc0">Cross Site Request Forgery Protection - Synchronizer Token</p>
+<hr>
 	<h1>Login</h1>
     <form method="POST" action="server.php">
     	<input type="text" name="user" placeholder="Username" required="required" />
@@ -31,6 +33,8 @@
 		<input type="hidden" name="user_csrf" id="IdOfToken" /> 
         <button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
     </form>
+
+    <p style="text-align:center;color: #95afc0">Done by <a href="">Kishanth - IT16062016</a></p>
 </div>
 
 
