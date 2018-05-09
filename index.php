@@ -1,13 +1,11 @@
 <?php 
-    //start session
-    session_start();
+     session_start();
 
-    
-    $sessionID = session_id(); // storing value of session id
-
-    setcookie("user_login",$sessionID,time()+1800,"/","localhost",false,true);
-    echo "value of cookie : ".$_COOKIE['user_login'];
-
+     //setting a cookie
+     $sessionID = session_id(); //storing session id
+ 
+     setcookie("user_login",$sessionID,time()+3600,"/","localhost",false,true); //cookie terminates after 1 hour - HTTP only flag
+     
 ?>
 
 
@@ -16,6 +14,7 @@
 
 <head>		
 <link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="conf.js"> </script>
 </head>
 
 
@@ -26,15 +25,23 @@
 <div class="login">
 	
 	<h1>Login</h1>
-    <form method="post">
-    	<input type="text" name="username" placeholder="Username" required="required" />
-		<input type="password" name="password" placeholder="Password" required="required" />
-		
-        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+    <form method="POST" action="server.php">
+    	<input type="text" name="user" placeholder="Username" required="required" />
+		<input type="password" name="pass" placeholder="Password" required="required" />
+		<input type="hidden" name="user_csrf" id="IdOfToken" /> 
+        <button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
     </form>
 </div>
 
 
+<?php 
+    //ajax call
+       if(isset($_COOKIE['user_login']))
+            { 
+                echo '<script> var token = loadDOC("POST","server.php","IdOfToken");  </script>'; 
+                        
+            }
+    ?>
 
 </body>
 </html>
