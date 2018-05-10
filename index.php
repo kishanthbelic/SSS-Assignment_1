@@ -12,7 +12,8 @@
 <!DOCTYPE html>
 <html>
 
-<head>		
+<head>
+    <title>Secure Software Systems - Assignment 1</title>		
 <link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript" src="conf.js"> </script>
 </head>
@@ -23,9 +24,12 @@
 		
 	
 <div class="login">
-<h1 style="font-size: 42px;text-align:center;color: #dff9fb;text;">SSS Assignment 1</h1>
+
+
+<h1 style="font-size: 35px;text-align:center;color: #dff9fb;text">Secure Software Systems </br> Assignment 1</h1>
         <p style="text-align:center;color: #95afc0">Cross Site Request Forgery Protection - Synchronizer Token</p>
-<hr>
+    <hr>
+
 	<h1>Login</h1>
     <form method="POST" action="server.php">
     	<input type="text" name="user" placeholder="Username" required="required" />
@@ -34,7 +38,7 @@
         <button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
     </form>
 
-    <p style="text-align:center;color: #95afc0">Done by <a href="">Kishanth - IT16062016</a></p>
+    <p style="text-align:center;color: #95afc0">Done by <a href="https://github.com/kishanthbelic/SSS-Assignment_1">Kishanth - IT16062016</a></p>
 </div>
 
 
